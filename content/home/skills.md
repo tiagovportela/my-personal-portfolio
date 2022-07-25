@@ -26,7 +26,7 @@ feature:
     name: Statistics
   - description: 50%
     icon: telescope
-    icon_pack: fas
+    icon_pack: fab
     name: Astronomy
 # Uncomment to use emoji icons.
 #- icon: ":smile:"
