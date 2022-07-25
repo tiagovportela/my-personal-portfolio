@@ -22,28 +22,32 @@ date_format: Jan 2006
 #   Leave `date_end` empty if it's your current employer.
 #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
 experience:
-  - title: CEO
-    company: GenCoin
+  - title: Motion Analyst
+    company: Nelo MAR KAYAKS
     company_url: ''
     company_logo: org-gc
-    location: California
-    date_start: '2021-01-01'
+    location: Vila do Conde
+    date_start: '2018-08-01'
     date_end: ''
     description: |2-
         Responsibilities include:
         
-        * Analysing
-        * Modelling
-        * Deploying
+        *  Build data acquisition system, for collecting data from Olimpic Kayaks
+        *  Analysing collected data
+        *  Modelling data
 
-  - title: Professor of Semiconductor Physics
-    company: University X
+  - title: IoT Product Research and Development
+    company: Nelo MAR KAYAKS
     company_url: ''
-    company_logo: org-x
-    location: California
-    date_start: '2016-01-01'
-    date_end: '2020-12-31'
-    description: Taught electronic engineering and researched semiconductor physics.
+    company_logo: org-gc
+    location: Vila do Conde
+    date_start: '2018-08-01'
+    date_end: ''
+    description: |2-
+      * Curing Oven Monitoring System ‑ Installation of a network of temperature and humidity sensors to monitor the curing ovens and API development for integration into the company’s software‑ Raspberry, ESP8266, DHT11/DHT22, Flask.
+      * Boat Production Monitoring System ‑ Creation of a system to photograph the boat in various stages of manufacture and respective API for integration in the company’s software ‑ Raspberry, WebCam, OpenCV, Flask.
+      * Nelo Power House ‑ Gym machine that simulates the movements performed on the boat, in which the user, through a mobile app, can see the power and speed of each exercise ‑ React Native, BLE, Flask, InfluxBD, Numpy, Raspberry, ToF sensor
+      * Nelo Smart Boat (Under development) ‑ Digitization of a recreational kayak, allowing the user to have real‑time feedback on their route among other indicators, as well as the use of an auxiliary engine for a journey with less effort on the most difficult routes. ‑ Raspberry, GPS, IMU, temperature, InfluxBD, Numpy, Sockets, React, Python, systemd, Flask
 
 design:
   columns: '2'
