@@ -22,6 +22,9 @@ education:
     - course: MIEEC - Mestrado Integrado em Engenharia Eletroctenica e de Computadores
         - dropout
       institution: "FEUP - Faculdade de Engenharia da Universidade do Porto "
+    - course: Post Graduation Data Science
+      institution: Universidade Atlantica
+      year: 2015
 superuser: true
 highlight_name: true
 title: Tiago Portela
