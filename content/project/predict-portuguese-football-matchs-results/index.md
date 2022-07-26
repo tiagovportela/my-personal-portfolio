@@ -40,6 +40,87 @@ Apos o scrape fiquei com um dataset da seguinte forma:
 
 ![header sofifa raw data](sofifa_raw_data_header.png)
 
+|    | name                     | type   |   null |   unique |
+|---:|:-------------------------|:-------|-------:|---------:|
+|  0 | Name                     | object |      0 |      476 |
+|  1 | Wage                     | object |      0 |       14 |
+|  2 | Value                    | object |      0 |      106 |
+|  3 | Overall Rating           | int64  |      0 |       26 |
+|  4 | Best Positions           | object |      0 |       81 |
+|  5 | Weight                   | object |      0 |       38 |
+|  6 | Height                   | object |      0 |       35 |
+|  7 | Age                      | object |      0 |       20 |
+|  8 | Preferred Foot           | object |      0 |        2 |
+|  9 | Weak Foot                | int64  |      0 |        5 |
+| 10 | Skill Moves              | int64  |      0 |        5 |
+| 11 | International Reputation | int64  |      0 |        4 |
+| 12 | Work Rate                | object |      0 |        8 |
+| 13 | Body Type                | object |      0 |        9 |
+| 14 | Joined                   | object |      0 |      167 |
+| 15 | Contract Valid Until     | object |      0 |        8 |
+| 16 | Crossing                 | int64  |      0 |       74 |
+| 17 | Finishing                | int64  |      0 |       75 |
+| 18 | Heading Accuracy         | int64  |      0 |       68 |
+| 19 | Short Passing            | int64  |      0 |       62 |
+| 20 | Volleys                  | int64  |      0 |       79 |
+| 21 | Dribbling                | int64  |      0 |       73 |
+| 22 | Curve                    | int64  |      0 |       76 |
+| 23 | FK Accuracy              | int64  |      0 |       72 |
+| 24 | Long Passing             | int64  |      0 |       69 |
+| 25 | Ball Control             | int64  |      0 |       67 |
+| 26 | Acceleration             | int64  |      0 |       72 |
+| 27 | Sprint Speed             | int64  |      0 |       71 |
+| 28 | Agility                  | int64  |      0 |       67 |
+| 29 | Reactions                | int64  |      0 |       38 |
+| 30 | Balance                  | int64  |      0 |       69 |
+| 31 | Shot Power               | int64  |      0 |       73 |
+| 32 | Jumping                  | int64  |      0 |       59 |
+| 33 | Stamina                  | int64  |      0 |       72 |
+| 34 | Strength                 | int64  |      0 |       62 |
+| 35 | Long Shots               | int64  |      0 |       80 |
+| 36 | Aggression               | int64  |      0 |       76 |
+| 37 | Interceptions            | int64  |      0 |       78 |
+| 38 | Positioning              | int64  |      0 |       80 |
+| 39 | Vision                   | int64  |      0 |       65 |
+| 40 | Penalties                | int64  |      0 |       73 |
+| 41 | Marking                  | int64  |      0 |       76 |
+| 42 | Standing Tackle          | int64  |      0 |       73 |
+| 43 | Sliding Tackle           | int64  |      0 |       72 |
+| 44 | GK Diving                | int64  |      0 |       38 |
+| 45 | GK Handling              | int64  |      0 |       34 |
+| 46 | GK Kicking               | int64  |      0 |       36 |
+| 47 | GK Positioning           | int64  |      0 |       36 |
+| 48 | GK Reflexes              | int64  |      0 |       39 |
+| 49 | Traits                   | object |      0 |      136 |
+| 50 | LS                       | int64  |      0 |       57 |
+| 51 | ST                       | int64  |      0 |       57 |
+| 52 | RS                       | int64  |      0 |       57 |
+| 53 | LW                       | int64  |      0 |       66 |
+| 54 | LF                       | int64  |      0 |       62 |
+| 55 | CF                       | int64  |      0 |       62 |
+| 56 | RF                       | int64  |      0 |       62 |
+| 57 | RW                       | int64  |      0 |       66 |
+| 58 | LAM                      | int64  |      0 |       61 |
+| 59 | CAM                      | int64  |      0 |       61 |
+| 60 | RAM                      | int64  |      0 |       61 |
+| 61 | LM                       | int64  |      0 |       61 |
+| 62 | LCM                      | int64  |      0 |       58 |
+| 63 | CM                       | int64  |      0 |       58 |
+| 64 | RCM                      | int64  |      0 |       58 |
+| 65 | RM                       | int64  |      0 |       61 |
+| 66 | LWB                      | int64  |      0 |       58 |
+| 67 | LDM                      | int64  |      0 |       58 |
+| 68 | CDM                      | int64  |      0 |       58 |
+| 69 | RDM                      | int64  |      0 |       58 |
+| 70 | RWB                      | int64  |      0 |       58 |
+| 71 | LB                       | int64  |      0 |       60 |
+| 72 | LCB                      | int64  |      0 |       62 |
+| 73 | CB                       | int64  |      0 |       62 |
+| 74 | RCB                      | int64  |      0 |       62 |
+| 75 | RB                       | int64  |      0 |       60 |
+| 76 | GK                       | int64  |      0 |       34 |
+
+
 O dataset é composto por 77 colunas e 476 linhas, correspondento a 77 atributos de 476 jogadores.
 
 #### 1.1.2 Portuguese League Games
