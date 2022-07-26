@@ -18,3 +18,7 @@ If the environmental variables are easy to verify, the athlete's performance pro
 To mitigate this problem a form of classification of the athlete's strokes was developed. In this way, it is possible to verify if in a series (exercise), there was a similar number of good strokes.
 
 For this task, we used a data acquisition system (DAS) consisting of an inertial sensor (IMU) and a web server, plus an Android application, which allows recording and synchronizing video frames with DAS data.
+
+
+
+![](reference_frame.png "DAS Reference Frame")
