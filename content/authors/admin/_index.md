@@ -30,6 +30,8 @@ highlight_name: true
 title: Tiago Portela
 email: tiagovportela@protonmail.com
 ---
-Hi, I'm Tiago, an analytical and self-taught mind with half a decade of experience working in data. I like to create some analytics apps and experiment with different technologies or ideas.
+Hi, I'm Tiago, an analytical and self-taught mind with half a decade of experience working in data. I like to create some analytics apps and experiment with different technologies or ideas. I also develope IoT system for my corrent company.
 
- I'm also an amateur star who likes to look at the stars on the darkest and cleanest nights.
+My personal interrests are politics, history and philosophy. I love a good talk on this topics 
+
+I'm also an amateur astronomer who likes to look at the stars on the darkest and cleanest nights.
