@@ -10,6 +10,7 @@ links:
   - url: https://twitter.com/tiago_v_p_
     icon_pack: fab
     icon: twitter
+    name: Follow
 image:
   filename: featured.jpg
   focal_point: Smart
