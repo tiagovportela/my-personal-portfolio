@@ -61,9 +61,7 @@ The entry lasts until the maximum acceleration point, then entering the pull pha
 
 ![](stroke.jpeg "Stroke acceleration profile")
 
-The best way to detect the entry point of stroke is first to find ther maxima - PEAK. For that I will use the function [find_peaks](https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.find_peaks.html) 
-
-[](https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.find_peaks.html)from scipy module
+The best way to detect the entry point of stroke is first to find ther maxima - PEAK. For that I will use the function [find_peaks](https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.find_peaks.html) from scipy module.
 
 This function takes a 1-D array and finds all local maxima by simple comparison of neighboring values. Optionally, a subset of these peaks can be selected by specifying conditions for a peak's properties.
 
