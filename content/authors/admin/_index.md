@@ -1,6 +1,6 @@
 ---
 role: Motion Analyst and IoT Product Researcher and Development
-bio: "My research interests include IoT, machine learning, "
+bio: "My research interests include IoT, machine learning and data science. "
 interests:
   - Artificial Intelligence
   - Data Science and IoT
