@@ -6,7 +6,8 @@ draft: false
 featured: false
 links:
   - url: https://twitter.com/tiago_v_p_
-    icon_pack: fas
+    icon_pack: fab
+    icon: twitter
 image:
   filename: featured.jpg
   focal_point: Smart
