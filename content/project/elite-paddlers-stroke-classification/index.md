@@ -122,10 +122,16 @@ For that, first we normalize the data preservando a sa variancia, after that we 
 
 ![](pca_explained_variance.jpeg "PCA Explained Variance")
 
+In plot we see that the major drop happen from 1 to 2 feature, so we will use the first 2 features from PCA to plot the date.
 
+![](pca_scatter.jpeg "PCA Scatter Plot")
 
-The best way to detect the entry point of stroke is first to find ther maxima - PEAK. For that I will use the function [find_peaks](https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.find_peaks.html) from scipy module.
+Seens to have 3 data clusters but for a more rigorous aproch, we will use the elbow method to find the ideal number of clusters.
 
-This function takes a 1-D array and finds all local maxima by simple comparison of neighboring values. Optionally, a subset of these peaks can be selected by specifying conditions for a peak's properties.
+![](kmeans_inertia.jpeg "KMEANS Inertia Plot")
 
-Since it is humanly impossible for a stroke to see shorter than 0.3 seconds, we can specify the distance parameter as 30 - Since the sample frequency is of 100 Hz, 0.3 seconds corresponds to 30 points.
+ As showed in above plot the ideal number of clusters is 3, like was though before.
+
+Now that we have the number of clusters we will classify every stroke in dataseries.
+
+![](strokes_class.jpeg)
