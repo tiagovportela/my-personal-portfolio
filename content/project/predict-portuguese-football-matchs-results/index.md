@@ -44,11 +44,17 @@ O dataset é composto por 77 colunas e 476 linhas, correspondento a 77 atributos
 
 #### 1.1.2 Portuguese League Games
 
-Ao inspecionar o site oficial da liga portuguesa encontrei que ele contei uma api que retorna os dados do jogo.
+Ao inspecionar o site oficial da liga portuguesa encontrei um endpoint que retorna os dados do jogo.
 
 ```
 "https://www.ligaportugal.pt/pt/liga/jogo/{league_edition}/1/{week}/{match_number}/resumo/true"
 ```
+
+Assim construi um dataset com os dados de todos os jogos da liga.
+
+![portuguese league data](ligapt_raw_data_header.png)
+
+
 
 #### 1.1.3 Portuguese Leagues Games Odds
 
