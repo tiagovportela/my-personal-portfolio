@@ -50,7 +50,6 @@ For this study, it is important to divide the stroke into its various components
 
 From observing the movement of the boat-paddle-athlete system, we can split the different phases according to the picture below:
 
-
 ![](observational-model-for-kayak-analysis-including-two-levels-of-analysis-phases-and.png)
 
 The gathered signals are similar to this.
@@ -136,11 +135,16 @@ In the plot we see that the major drop happens from 1 to 2 features, so we will 
 
 The plot appears to have 3 data clusters, but for a more rigorous approach we will use the elbow method to find the right number of clusters.
 
+For that we'll use KMEANS, witch acording to scikit-learn page is cluster algorithm  that "clusters data by trying to separate samples in n groups of equal variance, minimizing a criterion known as the *inertia* or within-cluster sum-of-squares. This algorithm requires the number of clusters to be specified. It scales well to large number of samples and has been used across a large range of application areas in many different fields."
+
+This algorithm is suited to this problem, because it does not depend on previous label data.
+
 ![](kmeans_inertia.jpeg "KMEANS Inertia Plot")
 
 As shown in above plot the ideal number of clusters is 3, like being though before.
 
-
 Now that we have the number of clusters, we'll classify every stroke in the data series.
 
 ![](strokes_class.jpeg)
+
+With this procedure, we have a robust method for classifying the athlete stroke and with when we can compare the performance in different boats in a similar manner
