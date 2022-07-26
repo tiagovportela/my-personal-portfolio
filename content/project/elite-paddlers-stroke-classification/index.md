@@ -21,11 +21,10 @@ For this task, we used a data acquisition system (DAS) consisting of an inertial
 
 ![](reference_frame.png "DAS Reference Frame")
 
-After data collection, three data sets meeting the following requirements were chosen.
+After data collection, a data sets meeting the following requirements was chosen.
 
-* Same Environmental conditions
-* Same training routine
-* Equal speed
+* Best Environmental conditions
+* Best speed
 
 ### Roadmap
 
@@ -55,7 +54,7 @@ Making zoom in accelerations signals.
 
 ![](das_signal_translation.jpeg "Zoom Acceleration Signals ")
 
-Observing the signal above, we can see that there are 3 strokes (3 peaks), considering that the loss of acceleration is maximum at the exact moment before the paddle enters the water, we can say that the phase in the water starts at this point and lasts until the first negative peak entering areal phase.
+We can see that there are 3 strokes (3 peaks), considering that the loss of acceleration is maximum at the exact moment before the paddle enters the water, we can say that the phase in the water starts at this point and lasts until the first negative peak entering areal phase.
 
 The entry lasts until the maximum acceleration point, then entering the pull phase, which lasts until the acceleration is negative, entering the exit phase.
 
