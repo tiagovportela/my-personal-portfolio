@@ -4,6 +4,8 @@ subtitle: Development of a method to classify elite paddlers strokes.
 date: 2022-07-26T12:16:08.532Z
 draft: false
 featured: false
+tags:
+  - Data Science
 categories:
   - Data Science
 links:
