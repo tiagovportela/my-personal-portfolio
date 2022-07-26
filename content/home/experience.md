@@ -25,7 +25,7 @@ experience:
   - title: Motion Analyst
     company: Nelo MAR KAYAKS
     company_url: ''
-    company_logo: org-gc
+    company_logo: Nelo
     location: Vila do Conde
     date_start: '2018-08-01'
     date_end: ''
@@ -39,7 +39,7 @@ experience:
   - title: IoT Product Research and Development
     company: Nelo MAR KAYAKS
     company_url: ''
-    company_logo: org-gc
+    company_logo: Nelo
     location: Vila do Conde
     date_start: '2018-08-01'
     date_end: ''
