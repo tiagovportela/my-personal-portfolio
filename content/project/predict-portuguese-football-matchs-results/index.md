@@ -54,7 +54,57 @@ Assim construi um dataset com os dados de todos os jogos da liga.
 
 ![portuguese league data](ligapt_raw_data_header.png)
 
-|    | name                   | type    |   null |   unique |\n|---:|:-----------------------|:--------|-------:|---------:|\n|  0 | Date                   | object  |      0 |      131 |\n|  1 | Hour                   | object  |      0 |       13 |\n|  2 | Home team              | object  |      0 |       18 |\n|  3 | Away team              | object  |      0 |       18 |\n|  4 | Home team score        | int64   |      0 |        7 |\n|  5 | Away team score        | int64   |      0 |        7 |\n|  6 | Home team Formation    | float64 |     15 |        5 |\n|  7 | Away team Formation    | float64 |     15 |        6 |\n|  8 | Home_Remates           | int64   |      0 |       25 |\n|  9 | Away_Remates           | int64   |      0 |       24 |\n| 10 | Home_Posse de Bola     | int64   |      0 |       41 |\n| 11 | Away_Posse de Bola     | int64   |      0 |       41 |\n| 12 | Home_Faltas Cometidas  | int64   |      0 |       24 |\n| 13 | Away_Faltas Cometidas  | int64   |      0 |       24 |\n| 14 | Home_Cantos            | int64   |      0 |       16 |\n| 15 | Away_Cantos            | int64   |      0 |       17 |\n| 16 | Home_Cartões Amarelos  | int64   |      0 |        8 |\n| 17 | Away_Cartões Amarelos  | int64   |      0 |        8 |\n| 18 | Home_Cartões Vermelhos | int64   |      0 |        3 |\n| 19 | Away_Cartões Vermelhos | int64   |      0 |        3 |\n| 20 | home Player 1          | object  |     15 |      197 |\n| 21 | home Player 2          | object  |     15 |      203 |\n| 22 | home Player 3          | object  |     15 |      198 |\n| 23 | home Player 4          | object  |     15 |      199 |\n| 24 | home Player 5          | object  |     15 |      200 |\n| 25 | home Player 6          | object  |     15 |      190 |\n| 26 | home Player 7          | object  |     15 |      200 |\n| 27 | home Player 8          | object  |     15 |      201 |\n| 28 | home Player 9          | object  |     15 |      211 |\n| 29 | home Player 10         | object  |     15 |      200 |\n| 30 | home Player 11         | object  |     15 |      207 |\n| 31 | away Player 1          | object  |     15 |      208 |\n| 32 | away Player 2          | object  |     15 |      194 |\n| 33 | away Player 3          | object  |     15 |      202 |\n| 34 | away Player 4          | object  |     15 |      197 |\n| 35 | away Player 5          | object  |     15 |      195 |\n| 36 | away Player 6          | object  |     15 |      213 |\n| 37 | away Player 7          | object  |     15 |      212 |\n| 38 | away Player 8          | object  |     15 |      201 |\n| 39 | away Player 9          | object  |     15 |      195 |\n| 40 | away Player 10         | object  |     15 |      188 |\n| 41 | away Player 11         | object  |     15 |      200 |\n| 42 | url                    | object  |      0 |      306 |\n| 43 | Referee                | object  |      0 |       22 |\n| 44 | 1 Assistant            | object  |      0 |       38 |\n| 45 | 2 Assistant            | object  |      0 |       39 |\n| 46 | 3 Assistant            | object  |      0 |       84 |\n| 47 | Home Penalties         | float64 |    306 |        0 |\n| 48 | Away Penalties         | float64 |    306 |        0 |
+|    | name                   | type    |   null |   unique |
+|---:|:-----------------------|:--------|-------:|---------:|
+|  0 | Date                   | object  |      0 |      131 |
+|  1 | Hour                   | object  |      0 |       13 |
+|  2 | Home team              | object  |      0 |       18 |
+|  3 | Away team              | object  |      0 |       18 |
+|  4 | Home team score        | int64   |      0 |        7 |
+|  5 | Away team score        | int64   |      0 |        7 |
+|  6 | Home team Formation    | float64 |     15 |        5 |
+|  7 | Away team Formation    | float64 |     15 |        6 |
+|  8 | Home_Remates           | int64   |      0 |       25 |
+|  9 | Away_Remates           | int64   |      0 |       24 |
+| 10 | Home_Posse de Bola     | int64   |      0 |       41 |
+| 11 | Away_Posse de Bola     | int64   |      0 |       41 |
+| 12 | Home_Faltas Cometidas  | int64   |      0 |       24 |
+| 13 | Away_Faltas Cometidas  | int64   |      0 |       24 |
+| 14 | Home_Cantos            | int64   |      0 |       16 |
+| 15 | Away_Cantos            | int64   |      0 |       17 |
+| 16 | Home_Cartões Amarelos  | int64   |      0 |        8 |
+| 17 | Away_Cartões Amarelos  | int64   |      0 |        8 |
+| 18 | Home_Cartões Vermelhos | int64   |      0 |        3 |
+| 19 | Away_Cartões Vermelhos | int64   |      0 |        3 |
+| 20 | home Player 1          | object  |     15 |      197 |
+| 21 | home Player 2          | object  |     15 |      203 |
+| 22 | home Player 3          | object  |     15 |      198 |
+| 23 | home Player 4          | object  |     15 |      199 |
+| 24 | home Player 5          | object  |     15 |      200 |
+| 25 | home Player 6          | object  |     15 |      190 |
+| 26 | home Player 7          | object  |     15 |      200 |
+| 27 | home Player 8          | object  |     15 |      201 |
+| 28 | home Player 9          | object  |     15 |      211 |
+| 29 | home Player 10         | object  |     15 |      200 |
+| 30 | home Player 11         | object  |     15 |      207 |
+| 31 | away Player 1          | object  |     15 |      208 |
+| 32 | away Player 2          | object  |     15 |      194 |
+| 33 | away Player 3          | object  |     15 |      202 |
+| 34 | away Player 4          | object  |     15 |      197 |
+| 35 | away Player 5          | object  |     15 |      195 |
+| 36 | away Player 6          | object  |     15 |      213 |
+| 37 | away Player 7          | object  |     15 |      212 |
+| 38 | away Player 8          | object  |     15 |      201 |
+| 39 | away Player 9          | object  |     15 |      195 |
+| 40 | away Player 10         | object  |     15 |      188 |
+| 41 | away Player 11         | object  |     15 |      200 |
+| 42 | url                    | object  |      0 |      306 |
+| 43 | Referee                | object  |      0 |       22 |
+| 44 | 1 Assistant            | object  |      0 |       38 |
+| 45 | 2 Assistant            | object  |      0 |       39 |
+| 46 | 3 Assistant            | object  |      0 |       84 |
+| 47 | Home Penalties         | float64 |    306 |        0 |
+| 48 | Away Penalties         | float64 |    306 |        0 |
 
 #### 1.1.3 Portuguese Leagues Games Odds
 
