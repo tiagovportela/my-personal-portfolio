@@ -11,17 +11,17 @@ image:
 ---
 One of the most important challenges in the competitive Kayaks production industry is figuring out whether a new model performs better and where it can be improved. This task is not trivial, as it is not always clear how to measure performance as well as ensure that tests are performed under similar conditions.
 
-Ideally, the metric that best represents boat performance is speed, but it is not always possible to guarantee similar conditions between tests, as there are many variables to consider - for example, water current, wind direction and speed, and athlete's performance .
+Ideally, the metric that best represents boat performance is speed, but it is not always possible to guarantee similar conditions between tests, as there are many variables to consider - for example, water current, wind direction and speed, and athlete’s performance.
 
-If the environmental variables are easy to verify, the athlete's performance proves to be an arduous task. Thus, a systematic method of evaluating the athlete's performance is imperative.
+If the environmental variables are easy to verify, the athlete’s performance proves to be an arduous task. Thus, a systematic method of evaluating the athlete’s performance is imperative.
 
-To mitigate this problem a form of classification of the athlete's strokes was developed. In this way, it is possible to verify if in a series (exercise), there was a similar number of good strokes.
+To mitigate this problem a form of classification of the athlete’s strokes was developed. In this way, it is possible to verify if in a series (exercise), there was a similar number of good strokes.
 
 For this task, we used a data acquisition system (DAS) consisting of an inertial sensor (IMU) and a web server, plus an Android application, which allows recording and synchronizing video frames with DAS data.
 
 ![](reference_frame.png "DAS Reference Frame")
 
-After collecting the data, 3 datasets were chosen that meet the following requirements.
+After data collection, three data sets meeting the following requirements were chosen.
 
 * Same Environmental conditions
 * Same training routine
@@ -40,11 +40,12 @@ After collecting the data, 3 datasets were chosen that meet the following requir
 
 For this study, it is important to divide the stroke into its various components or phases.
 
-From the observation of the movement of the boat-paddle-athlete system, we can divide the different phases according to the image below:
+From observing the movement of the boat-paddle-athlete system, we can split the different phases according to the picture below:
+
 
 ![](observational-model-for-kayak-analysis-including-two-levels-of-analysis-phases-and.png)
 
-The signals that are collected look like this.
+The gathered signals are similar to this.
 
 ![](das_signal_translation_full.jpeg "Translation acceleration signals")
 
@@ -54,14 +55,13 @@ Making zoom in accelerations signals.
 
 ![](das_signal_translation.jpeg "Zoom Acceleration Signals ")
 
-Observing the signal above we can see that there are 3 strokes (3 peaks), considering that the loss of acceleration is maximum at the exact moment before the paddle enters the water, we can say that the phase in the water starts at this point and lasts until first negative peak, entering areal phase.
+Observing the signal above, we can see that there are 3 strokes (3 peaks), considering that the loss of acceleration is maximum at the exact moment before the paddle enters the water, we can say that the phase in the water starts at this point and lasts until the first negative peak entering areal phase.
 
-The entry lasts until the maximum acceleration point, then entering the pull phase which lasts until the acceleration is negative, entering the exit face.
+The entry lasts until the maximum acceleration point, then entering the pull phase, which lasts until the acceleration is negative, entering the exit phase.
 
 ![](stroke.jpeg "Stroke acceleration profile")
 
-So, now we have to calculate de indicators for each stroke phase.
-The indicators are calculated based on angular position and acceleration signals and are:
+So, now we have to calculate de indicators for each stroke phase. The indicators are calculated based on angular position and acceleration signals and are:
 
 * Speed Variation
 * Mean Pitch
@@ -71,7 +71,7 @@ The indicators are calculated based on angular position and acceleration signals
 * Max Acceleration
 * Useful Force
 
-After processing the data, we obtain a dataframe with 75 strokes and 39 indicators.
+After processing the data, we obtain a data frame with 75 strokes and 39 indicators.
 
 |     | name                            | type    | null | unique |
 | --- | ------------------------------- | ------- | ---- | ------ |
@@ -116,22 +116,21 @@ After processing the data, we obtain a dataframe with 75 strokes and 39 indicato
 | 38  | Stroke Time                     | float64 | 0    | 75     |
 
 Now, we have to group the strokes to find the class that they belong.
-Como podemos ver na table a cima, este novo dataframe tem multiples dimensões pelo que é impossivel visualizar de forma clara cada um dos clusters.
-Assim iremos proceder a uma reduçao de dimenção atraves de principal compoments analysis (PCA)
-For that, first we normalize the data preservando a sa variancia, after that we plot the explained variance ratio from PCA.
+As shown in the table above, this new data frame has several dimensions, so it is impossible to clearly visualize each of the clusters.
+Therefore, we will proceed to a dimension reduction by using Principal Compoment Analysis(PCA)
+For this, we first normalize the data by preserving its variance, then draw the explained variance ratio  from the PCA.
 
 ![](pca_explained_variance.jpeg "PCA Explained Variance")
 
-In plot we see that the major drop happen from 1 to 2 feature, so we will use the first 2 features from PCA to plot the date.
+In the plot we see that the major drop happens from 1 to 2 features, so we will use the first 2 features of PCA to plot the date.
 
 ![](pca_scatter.jpeg "PCA Scatter Plot")
 
-Seens to have 3 data clusters but for a more rigorous aproch, we will use the elbow method to find the ideal number of clusters.
+The plot appears to have 3 data clusters, but for a more rigorous approach we will use the elbow method to find the right number of clusters.
 
 ![](kmeans_inertia.jpeg "KMEANS Inertia Plot")
 
- As showed in above plot the ideal number of clusters is 3, like was though before.
-
-Now that we have the number of clusters we will classify every stroke in dataseries.
+As shown in above plot the ideal number of clusters is 3, like being though before.
+Now that we have the number of clusters, we'll classify every stroke in the data series.
 
 ![](strokes_class.jpeg)
