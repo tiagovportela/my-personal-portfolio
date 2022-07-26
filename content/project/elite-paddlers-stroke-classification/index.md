@@ -147,4 +147,4 @@ Now that we have the number of clusters, we'll classify every stroke in the data
 
 ![](strokes_class.jpeg)
 
-With this procedure, we have a robust method for classifying the athlete stroke and with when we can compare the performance in different boats in a similar manner
+With this procedure, we have a robust method for classifying the athlete stroke and with it we can compare the performance in different boats in a similar manner
