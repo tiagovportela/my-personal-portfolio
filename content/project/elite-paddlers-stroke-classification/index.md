@@ -41,7 +41,6 @@ After collecting the data, 3 datasets were chosen that meet the following requir
 For this study, it is important to divide the stroke into its various components or phases.
 
 From the observation of the movement of the boat-paddle-athlete system, we can divide the different phases according to the image below:
- 
 
 ![](observational-model-for-kayak-analysis-including-two-levels-of-analysis-phases-and.png)
 
@@ -60,6 +59,70 @@ Observing the signal above we can see that there are 3 strokes (3 peaks), consid
 The entry lasts until the maximum acceleration point, then entering the pull phase which lasts until the acceleration is negative, entering the exit face.
 
 ![](stroke.jpeg "Stroke acceleration profile")
+
+So, now we have to calculate de indicators for each stroke phase.
+The indicators are calculated based on angular position and acceleration signals and are:
+
+* Speed Variation
+* Mean Pitch
+* Pitch Amplitude
+* Mean Acceleration
+* Min Acceleration
+* Max Acceleration
+* Useful Force
+
+After processing the data, we obtain a dataframe with 75 strokes and 39 indicators.
+
+|     | name                            | type    | null | unique |
+| --- | ------------------------------- | ------- | ---- | ------ |
+| 0   | Speed Variation - Entry Phase   | float64 | 0    | 75     |
+| 1   | Pitch Amplitude - Entry Phase   | float64 | 0    | 75     |
+| 2   | Mean Acceleration - Entry Phase | float64 | 0    | 75     |
+| 3   | Min Acceleration - Entry Phase  | float64 | 0    | 75     |
+| 4   | Max Acceleration - Entry Phase  | float64 | 0    | 75     |
+| 5   | Mean Pitch - Entry Phase        | float64 | 0    | 75     |
+| 6   | Useful Force - Entry Phase      | float64 | 0    | 75     |
+| 7   | Speed Variation - Pull Phase    | float64 | 0    | 75     |
+| 8   | Pitch Amplitude - Pull Phase    | float64 | 0    | 75     |
+| 9   | Mean Acceleration - Pull Phase  | float64 | 0    | 75     |
+| 10  | Min Acceleration - Pull Phase   | float64 | 0    | 75     |
+| 11  | Max Acceleration - Pull Phase   | float64 | 0    | 75     |
+| 12  | Mean Pitch - Pull Phase         | float64 | 0    | 75     |
+| 13  | Useful Force - Pull Phase       | float64 | 0    | 75     |
+| 14  | Speed Variation - Exit Phase    | float64 | 0    | 75     |
+| 15  | Pitch Amplitude - Exit Phase    | float64 | 0    | 75     |
+| 16  | Mean Acceleration - Exit Phase  | float64 | 0    | 75     |
+| 17  | Min Acceleration - Exit Phase   | float64 | 0    | 75     |
+| 18  | Max Acceleration - Exit Phase   | float64 | 0    | 75     |
+| 19  | Mean Pitch - Exit Phase         | float64 | 0    | 75     |
+| 20  | Useful Force - Exit Phase       | float64 | 0    | 75     |
+| 21  | Speed Variation - Air Phase     | float64 | 0    | 75     |
+| 22  | Pitch Amplitude - Air Phase     | float64 | 0    | 75     |
+| 23  | Mean Acceleration - Air Phase   | float64 | 0    | 75     |
+| 24  | Min Acceleration - Air Phase    | float64 | 0    | 75     |
+| 25  | Max Acceleration - Air Phase    | float64 | 0    | 75     |
+| 26  | Mean Pitch - Air Phase          | float64 | 0    | 75     |
+| 27  | Useful Force - Air Phase        | float64 | 0    | 75     |
+| 28  | Speed Variation - Water Phase   | float64 | 0    | 75     |
+| 29  | Pitch Amplitude - Water Phase   | float64 | 0    | 75     |
+| 30  | Mean Acceleration - Water Phase | float64 | 0    | 75     |
+| 31  | Min Acceleration - Water Phase  | float64 | 0    | 75     |
+| 32  | Max Acceleration - Water Phase  | float64 | 0    | 75     |
+| 33  | Mean Pitch - Water Phase        | float64 | 0    | 75     |
+| 34  | Useful Force - Water Phase      | float64 | 0    | 75     |
+| 35  | Water Time                      | float64 | 0    | 75     |
+| 36  | Air Time                        | float64 | 0    | 75     |
+| 37  | Stroke Rate                     | float64 | 0    | 75     |
+| 38  | Stroke Time                     | float64 | 0    | 75     |
+
+Now, we have to group the strokes to find the class that they belong.
+Como podemos ver na table a cima, este novo dataframe tem multiples dimensões pelo que é impossivel visualizar de forma clara cada um dos clusters.
+Assim iremos proceder a uma reduçao de dimenção atraves de principal compoments analysis (PCA)
+For that, first we normalize the data preservando a sa variancia, after that we plot the explained variance ratio from PCA.
+
+![](pca_explained_variance.jpeg "PCA Explained Variance")
+
+
 
 The best way to detect the entry point of stroke is first to find ther maxima - PEAK. For that I will use the function [find_peaks](https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.find_peaks.html) from scipy module.
 
