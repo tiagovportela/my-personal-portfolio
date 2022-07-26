@@ -19,16 +19,28 @@ To mitigate this problem a form of classification of the athlete's strokes was d
 
 For this task, we used a data acquisition system (DAS) consisting of an inertial sensor (IMU) and a web server, plus an Android application, which allows recording and synchronizing video frames with DAS data.
 
-
-
 ![](reference_frame.png "DAS Reference Frame")
 
 After collecting the data, 3 datasets were chosen that meet the following requirements.
+
 * Same Environmental conditions
 * Same training routine
 * Equal speed
+
 ### Roadmap
+
 1. Find starting point of the stroke
 2. Divide Stroke into its various phases
 3. Calculate indicators for eche phases
 4. Classify strokes groups based on its indicators
+
+# Stroke Phases Division
+
+"Canoe paddle strokes are the means by which a paddle (or paddles) is used to move a canoe through the water.";
+
+For this study, it is important to divide the stroke into its various components or phases.
+
+From the observation of the movement of the boat-paddle-athlete system, we can divide the different phases according to the image below:
+ 
+
+![](observational-model-for-kayak-analysis-including-two-levels-of-analysis-phases-and.png)
