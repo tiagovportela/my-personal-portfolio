@@ -22,3 +22,13 @@ For this task, we used a data acquisition system (DAS) consisting of an inertial
 
 
 ![](reference_frame.png "DAS Reference Frame")
+
+After collecting the data, 3 datasets were chosen that meet the following requirements.
+* Same Environmental conditions
+* Same training routine
+* Equal speed
+### Roadmap
+1. Find starting point of the stroke
+2. Divide Stroke into its various phases
+3. Calculate indicators for eche phases
+4. Classify strokes groups based on its indicators
