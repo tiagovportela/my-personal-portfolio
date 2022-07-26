@@ -44,3 +44,13 @@ From the observation of the movement of the boat-paddle-athlete system, we can d
  
 
 ![](observational-model-for-kayak-analysis-including-two-levels-of-analysis-phases-and.png)
+
+The signals that are collected look like this.
+
+![](das_signal_translation_full.jpeg "Translation acceleration signals")
+
+![](das_signal_rotations_full.jpeg "Angular position signals")
+
+Observing the signal above we can see that there are 3 strokes (3 peaks), considering that the loss of acceleration is maximum at the exact moment before the paddle enters the water, we can say that the phase in the water starts at this point and lasts until first negative peak, entering area phase
+
+The entry lasts until the maximum acceleration point, then entering the pull phase which lasts until the acceleration is negative, entering the exit face.
