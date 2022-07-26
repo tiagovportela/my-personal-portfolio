@@ -24,10 +24,10 @@ feature:
     icon: chart-line
     icon_pack: fas
     name: Statistics
-  - description: 50%
-    icon: telescope
-    icon_pack: fa
-    name: Astronomy
+  #- description: 50%
+  #  icon: telescope
+  #  icon_pack: fa
+  #  name: Astronomy
 # Uncomment to use emoji icons.
 #- icon: ":smile:"
 #  icon_pack: "emoji"
