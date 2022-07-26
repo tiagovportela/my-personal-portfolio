@@ -35,7 +35,7 @@ Para criar o dataset adquado para o objectivo recolhi dados da web sobre os jogo
 
 #### 1.1.1 Scrape Players data
 
-Um bom site com dados de jogadores de futebol é o [https://sofifa.com](sofifa.com).
+Um bom site com dados de jogadores de futebol é o [sofifa.com](https://sofifa.com).
 Depois de examinar o site não encontrei nenhuma api com os dados de interesse, por isso usei scrapy, que é um framework the python para webscraping.
 
 #### 1.1.2 Scrape Portuguese League Games
