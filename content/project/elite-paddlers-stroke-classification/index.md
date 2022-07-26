@@ -131,6 +131,8 @@ The plot appears to have 3 data clusters, but for a more rigorous approach we wi
 ![](kmeans_inertia.jpeg "KMEANS Inertia Plot")
 
 As shown in above plot the ideal number of clusters is 3, like being though before.
+
+
 Now that we have the number of clusters, we'll classify every stroke in the data series.
 
 ![](strokes_class.jpeg)
