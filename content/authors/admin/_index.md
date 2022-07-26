@@ -30,4 +30,6 @@ highlight_name: true
 title: Tiago Portela
 email: tiagovportela@protonmail.com
 ---
-Tiago Portela sdfsdf
+Hi, I'm Tiago, an analytical and self-taught mind with half a decade of experience working in data. I like to create some analytics apps and experiment with different technologies or ideas.
+
+ I'm also an amateur star who likes to look at the stars on the darkest and cleanest nights.
