@@ -27,10 +27,10 @@ content:
   filter_button:
     - name: All
       tag: '*'
-    - name: Deep Learning
-      tag: Deep Learning
-    - name: Other
-      tag: Demo
+    - name: Data Science
+      tag: Data Science
+    - name: IoT
+      tag: IoT
 
 design:
   # Choose how many columns the section has. Valid values: '1' or '2'.
