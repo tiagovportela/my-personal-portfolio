@@ -1,6 +1,6 @@
 ---
 title: Elite Paddlers Stroke Classification
-subtitle: Development of a method to classify elite rowers' strokes.
+subtitle: Development of a method to classify elite paddlers strokes.
 date: 2022-07-26T12:16:08.532Z
 draft: false
 featured: false
