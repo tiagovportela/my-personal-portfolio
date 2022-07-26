@@ -32,19 +32,25 @@ Para criar o dataset adquado para o objectivo recolhi dados da web sobre os jogo
 
 ### 1.1 Scrape Data
 
-#### 1.1.1 Scrape Players data
+#### 1.1.1 Players data
 
 Um bom site com dados de jogadores de futebol é o [sofifa.com](https://sofifa.com).
 Depois de examinar o site não encontrei nenhuma api com os dados de interesse, por isso usei scrapy, que é um framework the python para webscraping.
 Apos o scrape fiquei com um dataset da seguinte forma:
 
-![](sofifa_raw_data_header.png)
+![header sofifa raw data](sofifa_raw_data_header.png)
 
-#### 1.1.2 Scrape Portuguese League Games
+O dataset é composto por 77 colunas e 476 linhas, correspondento a 77 atributos de 476 jogadores.
 
-asasassd
+#### 1.1.2 Portuguese League Games
 
-#### 1.1.3 Scrape Portuguese Leagues Games Odds
+Ao inspecionar o site oficial da liga portuguesa encontrei que ele contei uma api que retorna os dados do jogo.
+
+```
+"https://www.ligaportugal.pt/pt/liga/jogo/{league_edition}/1/{week}/{match_number}/resumo/true"
+```
+
+#### 1.1.3 Portuguese Leagues Games Odds
 
 dsgdfgdgdfgdd
 
