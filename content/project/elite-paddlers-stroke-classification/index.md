@@ -5,7 +5,7 @@ date: 2022-07-26T12:16:08.532Z
 draft: false
 featured: false
 image:
-  filename: reference_frame.png
+  filename: featured.jpg
   focal_point: Smart
   preview_only: false
 ---
