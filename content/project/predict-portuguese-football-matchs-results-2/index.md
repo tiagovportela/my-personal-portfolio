@@ -24,7 +24,7 @@ image:
   focal_point: Smart
   preview_only: false
 ---
-### Goal:
+### Goal: Predict Portuguese Football League Match Results.
 
 ### Roadmap
 
@@ -48,7 +48,7 @@ For met the project goal, i need a dataset with data from matches, player in mat
 The web is full with data from footbal games, but only for the top leagues. So i do a research and find that portuguese league [official website](https://ligaportugal.pt) have all games data from 2017 until now. After more research i discover a hidden endopoint that return a resume for league game.
 
 ```textile
-/pt/liga/jogo/{league_edition}/league_id/{match_week}/{match}/resumo/true
+/pt/liga/jogo/{league_edition}/1/{match_week}/{match}/resumo/true
 ```
 
 With that i buil a simple program that collect data from all leagues from 2017 untill 2022 and save it to a CSV file. Because the response from endpoint is huge i choose the following features:
@@ -82,140 +82,54 @@ With that i buil a simple program that collect data from all leagues from 2017 u
 - Game stats like faul, shots, red and yellow cards, ball possetion and courners
   
 
-The dataset have the following features:
-
-| Column Name | Type | Unique | Null Values |
-| --- | --- | --- | --- |
-| Date | object | 131 | 0   |
-| Hour | object | 13  | 0   |
-| Home team | object | 18  | 0   |
-| Away team | object | 18  | 0   |
-| Home team score | int64 | 7   | 0   |
-| Away team score | int64 | 7   | 0   |
-| Home team Formation | int64 | 5   | 0   |
-| Away team Formation | int64 | 6   | 0   |
-| Home_Remates | int64 | 25  | 0   |
-| Away_Remates | int64 | 24  | 0   |
-| Home_Posse de Bola | int64 | 41  | 0   |
-| Away_Posse de Bola | int64 | 41  | 0   |
-| Home_Faltas Cometidas | int64 | 24  | 0   |
-| Away_Faltas Cometidas | int64 | 24  | 0   |
-| Home_Cantos | int64 | 16  | 0   |
-| Away_Cantos | int64 | 17  | 0   |
-| Home_Cartões Amarelos | int64 | 8   | 0   |
-| Away_Cartões Amarelos | int64 | 8   | 0   |
-| Home_Cartões Vermelhos | int64 | 3   | 0   |
-| Away_Cartões Vermelhos | int64 | 3   | 0   |
-| home Player 1 | object | 204 | 0   |
-| home Player 2 | object | 208 | 1   |
-| home Player 3 | object | 202 | 0   |
-| home Player 4 | object | 208 | 0   |
-| home Player 5 | object | 206 | 1   |
-| home Player 6 | object | 197 | 0   |
-| home Player 7 | object | 205 | 1   |
-| home Player 8 | object | 208 | 0   |
-| home Player 9 | object | 216 | 1   |
-| home Player 10 | object | 203 | 1   |
-| home Player 11 | object | 214 | 1   |
-| away Player 1 | object | 216 | 0   |
-| away Player 2 | object | 199 | 0   |
-| away Player 3 | object | 208 | 0   |
-| away Player 4 | object | 199 | 0   |
-| away Player 5 | object | 201 | 0   |
-| away Player 6 | object | 219 | 0   |
-| away Player 7 | object | 218 | 0   |
-| away Player 8 | object | 205 | 1   |
-| away Player 9 | object | 200 | 0   |
-| away Player 10 | object | 196 | 0   |
-| away Player 11 | object | 208 | 0   |
-| url | object | 306 | 0   |
-| Referee | object | 22  | 0   |
-| 1 Assistant | object | 38  | 0   |
-| 2 Assistant | object | 39  | 0   |
-| 3 Assistant | object | 84  | 0   |
-| Home Penalties | float64 | 1   | 0   |
-| Away Penalties | float64 | 1   | 0   |
-
 #### 1.2 Players data.
 
 A good site with football player data is [https://sofifa.com](https://sofifa.com). After looking through the site I didn't find any api with the data of interest, so I used scrapy, which is the python framework for webscraping. After collect data for the years between 2017 and 2021, I had a dataset as follows:
 
-| Column Name | Type | Unique | Null Values |
-| --- | --- | --- | --- |
-| Name | object | 476 | 0   |
-| Wage | object | 14  | 0   |
-| Value | object | 106 | 0   |
-| Overall Rating | int64 | 26  | 0   |
-| Best Positions | object | 81  | 0   |
-| Weight | object | 38  | 0   |
-| Height | object | 35  | 0   |
-| Age | object | 20  | 0   |
-| Preferred Foot | object | 2   | 0   |
-| Weak Foot | int64 | 5   | 0   |
-| Skill Moves | int64 | 5   | 0   |
-| International Reputation | int64 | 4   | 0   |
-| Work Rate | object | 8   | 0   |
-| Body Type | object | 9   | 0   |
-| Joined | object | 167 | 0   |
-| Contract Valid Until | object | 8   | 0   |
-| Crossing | int64 | 74  | 0   |
-| Finishing | int64 | 75  | 0   |
-| Heading Accuracy | int64 | 68  | 0   |
-| Short Passing | int64 | 62  | 0   |
-| Volleys | int64 | 79  | 0   |
-| Dribbling | int64 | 73  | 0   |
-| Curve | int64 | 76  | 0   |
-| FK Accuracy | int64 | 72  | 0   |
-| Long Passing | int64 | 69  | 0   |
-| Ball Control | int64 | 67  | 0   |
-| Acceleration | int64 | 72  | 0   |
-| Sprint Speed | int64 | 71  | 0   |
-| Agility | int64 | 67  | 0   |
-| Reactions | int64 | 38  | 0   |
-| Balance | int64 | 69  | 0   |
-| Shot Power | int64 | 73  | 0   |
-| Jumping | int64 | 59  | 0   |
-| Stamina | int64 | 72  | 0   |
-| Strength | int64 | 62  | 0   |
-| Long Shots | int64 | 80  | 0   |
-| Aggression | int64 | 76  | 0   |
-| Interceptions | int64 | 78  | 0   |
-| Positioning | int64 | 80  | 0   |
-| Vision | int64 | 65  | 0   |
-| Penalties | int64 | 73  | 0   |
-| Marking | int64 | 76  | 0   |
-| Standing Tackle | int64 | 73  | 0   |
-| Sliding Tackle | int64 | 72  | 0   |
-| GK Diving | int64 | 38  | 0   |
-| GK Handling | int64 | 34  | 0   |
-| GK Kicking | int64 | 36  | 0   |
-| GK Positioning | int64 | 36  | 0   |
-| GK Reflexes | int64 | 39  | 0   |
-| Traits | object | 136 | 0   |
-| LS  | int64 | 57  | 0   |
-| ST  | int64 | 57  | 0   |
-| RS  | int64 | 57  | 0   |
-| LW  | int64 | 66  | 0   |
-| LF  | int64 | 62  | 0   |
-| CF  | int64 | 62  | 0   |
-| RF  | int64 | 62  | 0   |
-| RW  | int64 | 66  | 0   |
-| LAM | int64 | 61  | 0   |
-| CAM | int64 | 61  | 0   |
-| RAM | int64 | 61  | 0   |
-| LM  | int64 | 61  | 0   |
-| LCM | int64 | 58  | 0   |
-| CM  | int64 | 58  | 0   |
-| RCM | int64 | 58  | 0   |
-| RM  | int64 | 61  | 0   |
-| LWB | int64 | 58  | 0   |
-| LDM | int64 | 58  | 0   |
-| CDM | int64 | 58  | 0   |
-| RDM | int64 | 58  | 0   |
-| RWB | int64 | 58  | 0   |
-| LB  | int64 | 60  | 0   |
-| LCB | int64 | 62  | 0   |
-| CB  | int64 | 62  | 0   |
-| RCB | int64 | 62  | 0   |
-| RB  | int64 | 60  | 0   |
-| GK  | int64 | 34  | 0   |
+#### 1.3 Odds Data
+
+This is the easiest data to find. The https://www.football-data.co.uk/ had CSV for all portuguese league seasons that i need, i juts have to download it.
+
+### 2. Data Cleaning.
+
+#### 2.1 Match Data.
+
+First i drop the columns with 80% ou more of missing values. Depois disso quei com
+
+as seguintes colunas com missing values:
+
+| Column Name | Percentage Missing Values |
+| --- | --- |
+| Home team Formation | 0.05 |
+| Away team Formation | 0.05 |
+| home Player 1 - 11 | 0.05 |
+| away Player 1 - 11 | 0.05 |
+
+As colunas Home Team Formation e Away Team Formation irei preencher com o valor da moda em Casa e Fora de cado uma das equipas
+
+As colunas com o nome dos jogadores do 11 inicial, com outra chamada ao endpoint mas para outro campo que tambem contem esta informação.
+
+### 2.2 Players Data.
+
+Cada jogador presente no dataset tem um conjunto de 77 atributos.
+Destas apenas 13 tem valores nao numericos (tabela em baixo).
+
+
+| Name                                   | Wage   | Value   | Best Positions   | Weight   | Height   | Age    | Preferred Foot   | Work Rate      | Body Type      | Joined       | Contract Valid Until   | Traits                                               |
+|:---------------------------------------|:-------|:--------|:-----------------|:---------|:---------|:-------|:-----------------|:---------------|:---------------|:-------------|:-----------------------|:-----------------------------------------------------|
+| Jonas Gonçalves Oliveira               | €30K   | €19.5M  | ST               | 74kg     | 182cm    | 33y.o. | Right            | High/ Medium   | Lean (170-185) | Sep 12, 2014 | 2020                   | ['Diver', 'Finesse Shot', 'Technical Dribbler (AI)'] |
+| Romain Jules Salin                     | €10K   | €2.3M   | GK               | 76kg     | 189cm    | 32y.o. | Left             | Medium/ Medium | Lean (185+)    | Jul 29, 2017 | 2019                   | []                                                   |
+| Domingos Sousa Coutinho Meneses Duarte | €6K    | €3.9M   | CB               | 78kg     | 190cm    | 22y.o. | Right            | Medium/ Medium | Lean (185+)    | Sporting CP  | Jun 30, 2018           | []                                                   |
+| António Filipe Norinho de Carvalho     | €6K    | €1.8M   | GK               | 79kg     | 186cm    | 32y.o. | Right            | Medium/ Medium | Lean (185+)    | Jul 1, 2015  | 2019                   | ['Comes For Crosses']                                |
+| Ewerton da Silva Pereira               | €5K    | €1.1M   | CDM CM           | 69kg     | 179cm    | 24y.o. | Right            | Medium/ Medium | Lean (170-185) | Aug 11, 2014 | 2021                   | []  
+
+Assim porcedi à remoção das unidades em cada uma destas colunas.
+
+| Name                                   |   Wage |    Value |   Weight |   Height |   Age | Preferred Foot   | Work Rate      | Body Type      |   Joined |   Contract Valid Until |
+|:---------------------------------------|-------:|---------:|---------:|---------:|------:|:-----------------|:---------------|:---------------|---------:|-----------------------:|
+| Jonas Gonçalves Oliveira               |  30000 | 1.95e+07 |       74 |      182 |    33 | Right            | High/ Medium   | Lean (170-185) |     2014 |                   2020 |
+| Romain Jules Salin                     |  10000 | 2.3e+06  |       76 |      189 |    32 | Left             | Medium/ Medium | Lean (185+)    |     2017 |                   2019 |
+| Domingos Sousa Coutinho Meneses Duarte |   6000 | 3.9e+06  |       78 |      190 |    22 | Right            | Medium/ Medium | Lean (185+)    |      nan |                   2018 |
+| António Filipe Norinho de Carvalho     |   6000 | 1.8e+06  |       79 |      186 |    32 | Right            | Medium/ Medium | Lean (185+)    |     2015 |                   2019 |
+| Ewerton da Silva Pereira               |   5000 | 1.1e+06  |       69 |      179 |    24 | Right            | Medium/ Medium | Lean (170-185) |     2014 |                   2021 |
+
